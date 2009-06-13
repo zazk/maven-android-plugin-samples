@@ -14,39 +14,34 @@
  * limitations under the License.
  */
 
-package com.example.android.apis.graphics.spritetext;
+package com.example.android.apis.app;
 
-import javax.microedition.khronos.opengles.GL;
+import com.example.android.apis.R;
 
 import android.app.Activity;
-import android.opengl.GLSurfaceView;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
 
-public class SpriteTextActivity extends Activity {
-
+public class Intents extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mGLSurfaceView = new GLSurfaceView(this);
-        mGLSurfaceView.setGLWrapper(new GLSurfaceView.GLWrapper() {
-            public GL wrap(GL gl) {
-                return new MatrixTrackingGL(gl);
-            }});
-        mGLSurfaceView.setRenderer(new SpriteTextRenderer(this));
-        setContentView(mGLSurfaceView);
+
+        setContentView(R.layout.intents);
+
+        // Watch for button clicks.
+        Button button = (Button)findViewById(R.id.get_music);
+        button.setOnClickListener(mGetMusicListener);
     }
 
-    @Override
-    protected void onPause() {
-        super.onPause();
-        mGLSurfaceView.onPause();
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        mGLSurfaceView.onResume();
-    }
-
-    private GLSurfaceView mGLSurfaceView;
+    private OnClickListener mGetMusicListener = new OnClickListener() {
+        public void onClick(View v) {
+            Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
+            intent.setType("audio/*");
+            startActivity(Intent.createChooser(intent, "Select music"));
+        }
+    };
 }

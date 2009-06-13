@@ -32,9 +32,9 @@ import android.test.suitebuilder.annotation.SmallTest;
  * ServiceTestCase} for more information on how to write and extend service tests.
  * 
  * To run this test, you can type:
- * adb shell am instrument \
- *   -e package com.example.android.apis.app \
- *   -w com.example.android.apis.tests/android.test.InstrumentationTestRunner
+ * adb shell am instrument -w \
+ *   -e class com.example.android.apis.app.LocalServiceTest \
+ *   com.example.android.apis.tests/android.test.InstrumentationTestRunner
  */
 public class LocalServiceTest extends ServiceTestCase<LocalService> {
 

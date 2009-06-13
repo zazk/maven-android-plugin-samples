@@ -33,8 +33,6 @@
             android:label="@string/activity_sample_code"
             android:icon="@drawable/app_sample_code" >
 
-        <uses-library android:name="com.google.android.maps" />
-
         <activity android:name="ApiDemos">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -92,14 +90,18 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".app.SaveRestoreState" android:label="@string/activity_save_restore">
+        <activity android:name=".app.SaveRestoreState"
+                android:label="@string/activity_save_restore"
+                android:windowSoftInputMode="stateVisible|adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.SAMPLE_CODE" />
             </intent-filter>
         </activity>
 
-        <activity android:name=".app.PersistentState" android:label="@string/activity_persistent">
+        <activity android:name=".app.PersistentState"
+                android:label="@string/activity_persistent"
+                android:windowSoftInputMode="stateVisible|adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.SAMPLE_CODE" />
@@ -139,7 +141,30 @@
         <activity android:name=".app.RedirectGetter">
         </activity>
 
-        <activity android:name=".app.CustomTitle" android:label="@string/activity_custom_title">
+        <activity android:name=".app.CustomTitle"
+                android:label="@string/activity_custom_title"
+                android:windowSoftInputMode="stateVisible|adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".app.ReorderOnLaunch"
+                android:label="@string/activity_reorder">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name=".app.ReorderTwo" />
+        <activity android:name=".app.ReorderThree" />
+        <activity android:name=".app.ReorderFour" />
+        
+        <!-- Intent Samples -->
+
+        <activity android:name=".app.Intents" android:label="@string/activity_intents">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.SAMPLE_CODE" />
@@ -261,7 +286,20 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".app.StatusBarNotifications" android:label="App/Notification/Status Bar">
+        <!-- This is used to display a notification selected by the user
+             from StatusBarNotifications.  Note the configuration here so
+             that the activity layers on top of whatever the user is doing,
+             allowing them to press back to return. -->
+        <activity android:name=".app.NotificationDisplay"
+                android:theme="@style/Theme.Transparent"
+                android:taskAffinity=""
+                android:excludeFromRecents="true"
+                android:noHistory="true">
+        </activity>
+
+        <activity android:name=".app.StatusBarNotifications"
+                android:label="App/Notification/Status Bar"
+                android:launchMode="singleTop">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.SAMPLE_CODE" />
@@ -438,6 +476,16 @@
         </activity>
 
         <activity android:name=".app.DefaultValues" android:label="@string/default_values">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+
+
+        <!-- Voice Recognition Samples -->
+
+        <activity android:name=".app.VoiceRecognition" android:label="@string/voice_recognition">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.SAMPLE_CODE" />
@@ -1255,20 +1303,6 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".view.MapViewDemo" android:label="Views/MapView">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.SAMPLE_CODE" />
-            </intent-filter>
-        </activity>
-
-        <activity android:name=".view.MapViewCompassDemo" android:label="Views/MapView and Compass">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.SAMPLE_CODE" />
-            </intent-filter>
-        </activity>
-
         <!-- ************************************* -->
         <!--           GRAPHICS SAMPLES            -->
         <!-- ************************************* -->
@@ -1327,6 +1361,16 @@
         
         <activity android:name=".graphics.spritetext.SpriteTextActivity"
                 android:label="Graphics/OpenGL ES/Sprite Text"
+                android:theme="@android:style/Theme.NoTitleBar"
+                android:configChanges="orientation|keyboardHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name=".graphics.TouchRotateActivity"
+                android:label="Graphics/OpenGL ES/Touch Rotate"
                 android:theme="@android:style/Theme.NoTitleBar"
                 android:configChanges="orientation|keyboardHidden">
             <intent-filter>
@@ -1534,6 +1578,13 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".graphics.BitmapPixels" android:label="Graphics/BitmapPixels">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+
         <activity android:name=".graphics.Xfermodes" android:label="Graphics/Xfermodes">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -1584,6 +1635,31 @@
                 <category android:name="android.intent.category.SAMPLE_CODE" />
             </intent-filter>
         </activity>
+
+        <!-- ************************************* -->
+        <!--      APPWIDGET PACKAGE SAMPLES           -->
+        <!-- ************************************* -->
+
+        <receiver android:name=".appwidget.ExampleAppWidgetProvider">
+            <meta-data android:name="android.appwidget.provider"
+                    android:resource="@xml/appwidget_provider" />
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".appwidget.ExampleAppWidgetConfigure">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+            </intent-filter>
+        </activity>
+
+        <receiver android:name=".appwidget.ExampleBroadcastReceiver" android:enabled="false">
+            <intent-filter>
+                <action android:name="android.intent.ACTION_TIMEZONE_CHANGED" />
+                <action android:name="android.intent.ACTION_TIME" />
+            </intent-filter>
+        </receiver>
 
         <!-- ************************************* -->
         <!--             OTHER SAMPLES             -->

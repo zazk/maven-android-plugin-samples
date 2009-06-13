@@ -14,7 +14,6 @@
  * limitations under the License.
  */
 
-
 package com.example.android.apis.os;
 
 import junit.framework.TestCase;

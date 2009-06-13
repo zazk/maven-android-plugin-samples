@@ -16,9 +16,10 @@
 
 package com.example.android.apis.graphics.kube;
 
-import com.example.android.apis.graphics.GLSurfaceView;
+import android.opengl.GLSurfaceView;
 
 import javax.microedition.khronos.egl.EGL10;
+import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
 
 
@@ -36,7 +37,7 @@ class KubeRenderer implements GLSurfaceView.Renderer {
         mCallback = callback;
     }
 
-    public void drawFrame(GL10 gl) {
+    public void onDrawFrame(GL10 gl) {
          if (mCallback != null) {
              mCallback.animate();
          }
@@ -73,16 +74,7 @@ class KubeRenderer implements GLSurfaceView.Renderer {
         mWorld.draw(gl);
     }
 
-    public int[] getConfigSpec() {
-        // Need a depth buffer, don't care about color depth.
-        int[] configSpec = {
-                EGL10.EGL_DEPTH_SIZE,   16,
-                EGL10.EGL_NONE
-        };
-        return configSpec;
-    }
-
-    public void sizeChanged(GL10 gl, int width, int height) {
+    public void onSurfaceChanged(GL10 gl, int width, int height) {
         gl.glViewport(0, 0, width, height);
 
         /*
@@ -105,7 +97,7 @@ class KubeRenderer implements GLSurfaceView.Renderer {
         gl.glActiveTexture(GL10.GL_TEXTURE0);
     }
 
-    public void surfaceCreated(GL10 gl) {
+    public void onSurfaceCreated(GL10 gl, EGLConfig config) {
         // Nothing special, don't have any textures we need to recreate.
     }
 

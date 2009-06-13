@@ -17,6 +17,7 @@
 package com.example.android.apis.graphics;
 
 import android.app.Activity;
+import android.opengl.GLSurfaceView;
 import android.os.Bundle;
 
 public class TriangleActivity extends Activity {
@@ -25,6 +26,7 @@ public class TriangleActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mGLView = new GLSurfaceView(this);
+        mGLView.setEGLConfigChooser(false);
         mGLView.setRenderer(new TriangleRenderer(this));
         setContentView(mGLView);
     }

@@ -15,32 +15,27 @@
  * limitations under the License.
  -->
 
+<!-- This activity displays UI for launching voice recognition -->
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="fill_parent" 
-    android:layout_height="fill_parent">
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
     
-    <Button
-        android:layout_width="150dip" 
+    <TextView
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="@string/marquee_default"
-        android:singleLine="true"
-        android:ellipsize="marquee"/>
+        android:paddingBottom="4dip"
+        android:text="@string/voice_recognition_prompt" />
         
-    <Button
-        android:layout_width="150dip" 
+    <Button android:id="@+id/btn_speak"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="@string/marquee_once"
-        android:singleLine="true"
-        android:ellipsize="marquee"
-        android:marqueeRepeatLimit="1"/>
+        android:text="@string/speak_button" />
         
-    <Button
-        android:layout_width="150dip" 
-        android:layout_height="wrap_content"
-        android:text="@string/marquee_forever"
-        android:singleLine="true"
-        android:ellipsize="marquee"
-        android:marqueeRepeatLimit="marquee_forever"/>  
-           
-</LinearLayout>
+    <ListView android:id="@+id/list"
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1" />
+
+ </LinearLayout>

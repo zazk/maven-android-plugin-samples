@@ -31,7 +31,6 @@ import android.widget.AbsListView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.text.TextUtils;
 
 
 /**
@@ -75,6 +74,7 @@ public class List9 extends ListActivity implements ListView.OnScrollListener {
         mDialogText.setVisibility(View.INVISIBLE);
         
         mHandler.post(new Runnable() {
+
             public void run() {
                 mReady = true;
                 WindowManager.LayoutParams lp = new WindowManager.LayoutParams(
@@ -84,8 +84,7 @@ public class List9 extends ListActivity implements ListView.OnScrollListener {
                                 | WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE,
                         PixelFormat.TRANSLUCENT);
                 mWindowManager.addView(mDialogText, lp);
-            }
-        });
+            }});
     }
     
     @Override
@@ -105,36 +104,36 @@ public class List9 extends ListActivity implements ListView.OnScrollListener {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        if (mReady) {
-            mWindowManager.removeView(mDialogText);
-        }
+        mWindowManager.removeView(mDialogText);
         mReady = false;
     }
 
-    public void onScroll(AbsListView view, int firstVisibleItem, int visibleItemCount,
-            int totalItemCount) {
-
+    
+   
+    
+    public void onScroll(AbsListView view, int firstVisibleItem, int visibleItemCount, int totalItemCount) {
+        int lastItem = firstVisibleItem + visibleItemCount - 1;
         if (mReady) {
-            char firstLetter = ' ';
-            final String text = mStrings[firstVisibleItem];
-            if (!TextUtils.isEmpty(text)) {
-                firstLetter = text.charAt(0);
-            }
-
+            char firstLetter = mStrings[firstVisibleItem].charAt(0);
+            
             if (!mShowing && firstLetter != mPrevLetter) {
+
                 mShowing = true;
                 mDialogText.setVisibility(View.VISIBLE);
-            }
+               
 
+            }
             mDialogText.setText(((Character)firstLetter).toString());
             mHandler.removeCallbacks(mRemoveWindow);
             mHandler.postDelayed(mRemoveWindow, 3000);
             mPrevLetter = firstLetter;
         }
     }
+    
 
     public void onScrollStateChanged(AbsListView view, int scrollState) {
     }
+    
     
     private void removeWindow() {
         if (mShowing) {
