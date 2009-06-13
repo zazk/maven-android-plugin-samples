@@ -63,7 +63,6 @@
                         <layout>1.5</layout>
                         <platform>1.5</platform>
                     </androidSdk>
-                    <androidVersion>1.5_r1</androidVersion>
                     <deleteConflictingFiles>true</deleteConflictingFiles>
                 </configuration>
                 <extensions>true</extensions>

@@ -74,7 +74,6 @@
                         <layout>1.1</layout>
                         <platform>1.1</platform>
                     </androidSdk>
-                    <androidVersion>1.1_r1</androidVersion>
                     <deleteConflictingFiles>true</deleteConflictingFiles>
                     <undeployApkBeforeDeploying>true</undeployApkBeforeDeploying>
                 </configuration>
