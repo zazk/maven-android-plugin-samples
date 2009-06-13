@@ -68,10 +68,16 @@
                 <groupId>com.jayway.maven.plugins.android.generation2</groupId>
                 <artifactId>maven-android-plugin</artifactId>
                 <version>2.0.0-alpha3-SNAPSHOT</version>
-                <extensions>true</extensions>
                 <configuration>
+                    <androidSdk>
+                        <path>${env.ANDROID_SDK_11}</path>
+                        <layout>1.1</layout>
+                        <platform>1.1</platform>
+                    </androidSdk>
+                    <deleteConflictingFiles>true</deleteConflictingFiles>
                     <undeployApkBeforeDeploying>true</undeployApkBeforeDeploying>
                 </configuration>
+                <extensions>true</extensions>
             </plugin>
 
             <plugin>

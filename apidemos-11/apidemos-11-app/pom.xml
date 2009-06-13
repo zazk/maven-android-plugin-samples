@@ -35,7 +35,7 @@
         <dependency>
             <groupId>android</groupId>
             <artifactId>android</artifactId>
-            <version>1.5_r1</version>
+            <version>1.1_r1</version>
             <scope>provided</scope>
         </dependency>
 
@@ -59,9 +59,9 @@
                 <version>2.0.0-alpha3-SNAPSHOT</version>
                 <configuration>
                     <androidSdk>
-                        <path>/opt/android-sdk-linux_x86-1.5_r1</path>
-                        <layout>1.5</layout>
-                        <platform>1.5</platform>
+                        <path>${env.ANDROID_SDK_11}</path>
+                        <layout>1.1</layout>
+                        <platform>1.1</platform>
                     </androidSdk>
                     <deleteConflictingFiles>true</deleteConflictingFiles>
                 </configuration>
