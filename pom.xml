@@ -24,6 +24,7 @@
 
     <modules>
 		<module>apidemos</module>
+		<module>apidemos-11</module>
 	</modules>
 
     <url>http://code.google.com/p/maven-android-plugin</url>
