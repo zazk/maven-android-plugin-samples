@@ -21,13 +21,13 @@
         <artifactId>samples</artifactId>
         <version>2.0.0-alpha3-SNAPSHOT</version>
     </parent>
-	<groupId>com.jayway.maven.plugins.android.generation2.samples.apidemos</groupId>
-	<artifactId>apidemos</artifactId>
+	<groupId>com.jayway.maven.plugins.android.generation2.samples.apidemos-11</groupId>
+	<artifactId>apidemos-11</artifactId>
 	<version>2.0.0-alpha3-SNAPSHOT</version>
 	<packaging>pom</packaging>
-    <name>Maven Android Plugin - samples - ApiDemos</name>
+    <name>Maven Android Plugin - samples - Android SDK 1.1 ApiDemos</name>
 	<modules>
-		<module>apidemos-app</module>
-		<module>apidemos-platformtests</module>
+		<module>apidemos-11-app</module>
+		<module>apidemos-11-platformtests</module>
 	</modules>
 </project>

@@ -17,15 +17,15 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>com.jayway.maven.plugins.android.generation2.samples.apidemos</groupId>
-        <artifactId>apidemos</artifactId>
+        <groupId>com.jayway.maven.plugins.android.generation2.samples.apidemos-11</groupId>
+        <artifactId>apidemos-11</artifactId>
         <version>2.0.0-alpha3-SNAPSHOT</version>
     </parent>
-    <groupId>com.jayway.maven.plugins.android.generation2.samples.apidemos</groupId>
-    <artifactId>apidemos-app</artifactId>
+    <groupId>com.jayway.maven.plugins.android.generation2.samples.apidemos-11</groupId>
+    <artifactId>apidemos-11-platformtests</artifactId>
     <version>2.0.0-alpha3-SNAPSHOT</version>
-    <packaging>android:apk</packaging>
-    <name>Maven Android Plugin - samples - ApiDemos - App</name>
+    <packaging>android:apk:platformTest</packaging>
+    <name>Maven Android Plugin - samples - Android SDK 1.1 ApiDemos - Platformtests</name>
 
     <prerequisites>
         <maven>2.0.9</maven>
@@ -35,15 +35,26 @@
         <dependency>
             <groupId>android</groupId>
             <artifactId>android</artifactId>
-            <version>1.5_r1</version>
+            <version>1.1_r1</version>
             <scope>provided</scope>
         </dependency>
 
         <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.4</version>
-            <scope>test</scope>
+            <!-- the target apk, which we will test. will automatically be deployed to device in pre-integration-test
+            phase. -->
+            <groupId>com.jayway.maven.plugins.android.generation2.samples.apidemos-11</groupId>
+            <artifactId>apidemos-11-app</artifactId>
+            <version>2.0.0-alpha3-SNAPSHOT</version>
+            <type>android:apk</type>
+        </dependency>
+
+        <dependency>
+            <!-- optional: compile time dependency, in this case so that we can read from the R.java for example. -->
+            <groupId>com.jayway.maven.plugins.android.generation2.samples.apidemos-11</groupId>
+            <artifactId>apidemos-11-app</artifactId>
+            <version>2.0.0-alpha3-SNAPSHOT</version>
+            <scope>compile</scope>
+            <type>jar</type>
         </dependency>
     </dependencies>
     
@@ -57,15 +68,10 @@
                 <groupId>com.jayway.maven.plugins.android.generation2</groupId>
                 <artifactId>maven-android-plugin</artifactId>
                 <version>2.0.0-alpha3-SNAPSHOT</version>
-                <configuration>
-                    <androidSdk>
-                        <path>/opt/android-sdk-linux_x86-1.5_r1</path>
-                        <layout>1.5</layout>
-                        <platform>1.5</platform>
-                    </androidSdk>
-                    <deleteConflictingFiles>true</deleteConflictingFiles>
-                </configuration>
                 <extensions>true</extensions>
+                <configuration>
+                    <undeployApkBeforeDeploying>true</undeployApkBeforeDeploying>
+                </configuration>
             </plugin>
 
             <plugin>
