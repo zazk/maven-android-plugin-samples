@@ -58,9 +58,9 @@
                 <artifactId>maven-android-plugin</artifactId>
                 <version>2.0.0-alpha3-SNAPSHOT</version>
                 <configuration>
-                    <androidSdk>
+                    <sdk>
                         <path>${env.ANDROID_SDK_11}</path>
-                    </androidSdk>
+                    </sdk>
                     <deleteConflictingFiles>true</deleteConflictingFiles>
                 </configuration>
                 <extensions>true</extensions>
