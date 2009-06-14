@@ -60,8 +60,6 @@
                 <configuration>
                     <androidSdk>
                         <path>${env.ANDROID_SDK_11}</path>
-                        <layout>1.1</layout>
-                        <platform>1.1</platform>
                     </androidSdk>
                     <deleteConflictingFiles>true</deleteConflictingFiles>
                 </configuration>

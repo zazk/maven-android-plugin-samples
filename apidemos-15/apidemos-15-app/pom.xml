@@ -60,7 +60,6 @@
                 <configuration>
                     <androidSdk>
                         <path>${env.ANDROID_SDK_15}</path>
-                        <layout>1.5</layout>
                         <platform>1.5</platform>
                     </androidSdk>
                     <deleteConflictingFiles>true</deleteConflictingFiles>
