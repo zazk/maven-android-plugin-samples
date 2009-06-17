@@ -50,9 +50,6 @@
     <build>
         <!--<finalName>${artifactId}</finalName>-->
         <plugins>
-            <!--
-            maven-android-plugin requires environment variable ANDROID_SDK to be set appropriately.
-            -->
             <plugin>
                 <groupId>com.jayway.maven.plugins.android.generation2</groupId>
                 <artifactId>maven-android-plugin</artifactId>
