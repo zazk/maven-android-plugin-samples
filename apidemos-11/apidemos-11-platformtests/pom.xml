@@ -24,7 +24,7 @@
     <groupId>com.jayway.maven.plugins.android.generation2.samples.apidemos-11</groupId>
     <artifactId>apidemos-11-platformtests</artifactId>
     <version>2.0.0-alpha6-SNAPSHOT</version>
-    <packaging>android:apk:platformTest</packaging>
+    <packaging>apk</packaging>
     <name>Maven Android Plugin - samples - Android SDK 1.1 ApiDemos - Platformtests</name>
 
     <prerequisites>
@@ -45,7 +45,7 @@
             <groupId>com.jayway.maven.plugins.android.generation2.samples.apidemos-11</groupId>
             <artifactId>apidemos-11-app</artifactId>
             <version>2.0.0-alpha6-SNAPSHOT</version>
-            <type>android:apk</type>
+            <type>apk</type>
         </dependency>
 
         <dependency>

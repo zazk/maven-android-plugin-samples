@@ -24,7 +24,7 @@
     <groupId>com.jayway.maven.plugins.android.generation2.samples.apidemos-15</groupId>
     <artifactId>apidemos-15-app</artifactId>
     <version>2.0.0-alpha6-SNAPSHOT</version>
-    <packaging>android:apk</packaging>
+    <packaging>apk</packaging>
     <name>Maven Android Plugin - samples - Android SDK 1.5 ApiDemos - App</name>
 
     <prerequisites>
