@@ -19,11 +19,11 @@
     <parent>
         <groupId>com.jayway.maven.plugins.android.generation2.samples.apidemos-11</groupId>
         <artifactId>apidemos-11</artifactId>
-        <version>2.0.0-alpha5</version>
+        <version>2.0.0-alpha6-SNAPSHOT</version>
     </parent>
     <groupId>com.jayway.maven.plugins.android.generation2.samples.apidemos-11</groupId>
     <artifactId>apidemos-11-platformtests</artifactId>
-    <version>2.0.0-alpha5</version>
+    <version>2.0.0-alpha6-SNAPSHOT</version>
     <packaging>android:apk:platformTest</packaging>
     <name>Maven Android Plugin - samples - Android SDK 1.1 ApiDemos - Platformtests</name>
 
@@ -44,7 +44,7 @@
             phase. -->
             <groupId>com.jayway.maven.plugins.android.generation2.samples.apidemos-11</groupId>
             <artifactId>apidemos-11-app</artifactId>
-            <version>2.0.0-alpha5</version>
+            <version>2.0.0-alpha6-SNAPSHOT</version>
             <type>android:apk</type>
         </dependency>
 
@@ -52,7 +52,7 @@
             <!-- optional: compile time dependency, in this case so that we can read from the R.java for example. -->
             <groupId>com.jayway.maven.plugins.android.generation2.samples.apidemos-11</groupId>
             <artifactId>apidemos-11-app</artifactId>
-            <version>2.0.0-alpha5</version>
+            <version>2.0.0-alpha6-SNAPSHOT</version>
             <scope>compile</scope>
             <type>jar</type>
         </dependency>
