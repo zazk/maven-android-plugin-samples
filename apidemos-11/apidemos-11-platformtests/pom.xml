@@ -70,7 +70,7 @@
                         <path>${env.ANDROID_SDK_11}</path>
                     </sdk>
                     <deleteConflictingFiles>true</deleteConflictingFiles>
-                    <undeployApkBeforeDeploying>true</undeployApkBeforeDeploying>
+                    <undeployBeforeDeploy>true</undeployBeforeDeploy>
                 </configuration>
                 <extensions>true</extensions>
             </plugin>

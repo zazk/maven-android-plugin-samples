@@ -71,7 +71,7 @@
                         <platform>1.5</platform>
                     </sdk>
                     <deleteConflictingFiles>true</deleteConflictingFiles>
-                    <undeployApkBeforeDeploying>true</undeployApkBeforeDeploying>
+                    <undeployBeforeDeploy>true</undeployBeforeDeploy>
                 </configuration>
                 <extensions>true</extensions>
             </plugin>
