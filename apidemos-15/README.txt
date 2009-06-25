@@ -5,10 +5,10 @@ apidemos-15-app
     cd apidemos-15-app
     mvn install
     
-apidemos-15-platformtests
+apidemos-15-instrumentationtest
     Tests that can be run on the device. (Source code is from the official Android SDK samples.)
     To compile, install to connected phone/emulator, and run the tests on the device:
 
-    cd apidemos-15-platformtests
+    cd apidemos-15-instrumentationtest
     mvn install
     

@@ -22,10 +22,10 @@
         <version>2.0.0-alpha8-SNAPSHOT</version>
     </parent>
     <groupId>com.jayway.maven.plugins.android.generation2.samples.apidemos-15</groupId>
-    <artifactId>apidemos-15-platformtests</artifactId>
+    <artifactId>apidemos-15-instrumentationtest</artifactId>
     <version>2.0.0-alpha8-SNAPSHOT</version>
     <packaging>apk</packaging>
-    <name>Maven Android Plugin - samples - Android SDK 1.5 ApiDemos - Platformtests</name>
+    <name>Maven Android Plugin - samples - Android SDK 1.5 ApiDemos - Instrumentation Test</name>
 
     <prerequisites>
         <maven>2.0.9</maven>

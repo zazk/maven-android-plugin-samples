@@ -28,6 +28,6 @@
     <name>Maven Android Plugin - samples - Android SDK 1.1 ApiDemos</name>
 	<modules>
 		<module>apidemos-11-app</module>
-		<module>apidemos-11-platformtests</module>
+		<module>apidemos-11-instrumentationtest</module>
 	</modules>
 </project>
