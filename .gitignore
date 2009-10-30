@@ -5,4 +5,5 @@ target
 .settings
 .classpath
 .project
+.idea
 gen

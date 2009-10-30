@@ -23,10 +23,18 @@
     </parent>
 	<groupId>com.jayway.maven.plugins.android.generation2.samples.apidemos-11</groupId>
 	<artifactId>apidemos-11</artifactId>
-	<version>2.2.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
     <name>Maven Android Plugin - samples - Android SDK 1.1 ApiDemos</name>
-	<modules>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>android</groupId>
+                <artifactId>android</artifactId>
+                <version>1.1_r1</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+    <modules>
 		<module>apidemos-11-app</module>
 		<module>apidemos-11-instrumentationtest</module>
 	</modules>
