@@ -50,12 +50,12 @@
     </licenses>
     <developers>
         <developer>
-            <name>Hugo Josefson</name>
-            <id>hugojosefson</id>
-            <email>hugo@josefson.org</email>
-            <url>http://blog.jayway.com/</url>
+            <name>See homepage and mailinglist for contributors.</name>
+            <id>maven-android-plugin-project</id>
+            <url>http://code.google.com/p/maven-android-plugin</url>
             <roles>
                 <role>Developer</role>
+                <role>Contributor</role>
             </roles>
         </developer>
     </developers>
