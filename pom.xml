@@ -23,9 +23,10 @@
     <name>Maven Android Plugin - samples</name>
 
     <modules>
-		<module>apidemos-11</module>
-		<module>apidemos-15</module>
-	</modules>
+        <module>apidemos-11</module>
+        <module>apidemos-15</module>
+        <module>helloflashlight</module>
+    </modules>
 
     <url>http://code.google.com/p/maven-android-plugin</url>
     <inceptionYear>2009</inceptionYear>
