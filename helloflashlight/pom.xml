@@ -5,9 +5,19 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.simpligility.android</groupId>
     <artifactId>helloflashlight</artifactId>
-    <version>0.1-SNAPSHOT</version>
+    <version>2.2.3-SNAPSHOT</version>
     <packaging>apk</packaging>
     <name>HelloFlashlight</name>
+
+    <parent>
+        <!--
+            This parent tag is only relevant for releasing maven-android-plugin-samples.
+            You can safely remove it from your own project.
+        -->
+        <groupId>com.jayway.maven.plugins.android.generation2.samples</groupId>
+        <artifactId>samples</artifactId>
+        <version>2.2.3-SNAPSHOT</version>
+    </parent>
 
     <dependencies>
         <dependency>
