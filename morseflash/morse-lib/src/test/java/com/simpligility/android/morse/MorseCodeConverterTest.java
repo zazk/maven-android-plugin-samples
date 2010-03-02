@@ -45,9 +45,23 @@ public class MorseCodeConverterTest extends TestCase {
 
     public void testWhitespaceTreatment()
     {
-        long[] expected = MorseCodeConverter.pattern("Hello World");
-        long[] actual = MorseCodeConverter.pattern("123");
-        Assert.assertEquals(expected, actual);
+        long[] expected = new long[]{0,100,100,100,100,100,100,100,700,100,100,300,100,300,0};
+        long[] actual = MorseCodeConverter.pattern("H W");
+        Assert.assertArrayEquals(expected, actual);
     }
 
+    public void testChars()
+    {
+        Assert.assertArrayEquals(new long[] {100,100,300}, MorseCodeConverter.pattern('A'));
+
+        Assert.assertArrayEquals(new long[] {300,100,300}, MorseCodeConverter.pattern('m'));
+
+        Assert.assertArrayEquals(new long[] {300,100,300}, MorseCodeConverter.pattern('M'));
+
+        Assert.assertArrayEquals(new long[] {100}, MorseCodeConverter.pattern(' '));
+
+        Assert.assertArrayEquals(new long[] {100,100,100,100,100,100,100,100,300}, MorseCodeConverter.pattern('4'));
+
+        Assert.assertArrayEquals(new long[] {100}, MorseCodeConverter.pattern('?'));
+    }
 }
