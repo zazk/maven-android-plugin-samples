@@ -72,7 +72,7 @@ public class MorseCodeConverter {
     private static final long[] ERROR_GAP = new long[] { GAP };
 
     /** Return the pattern data for a given character */
-    static long[] pattern(char c) {
+    public static long[] pattern(char c) {
         if (c >= 'A' && c <= 'Z') {
             return LETTERS[c - 'A'];
         }
@@ -87,7 +87,7 @@ public class MorseCodeConverter {
         }
     }
 
-    static long[] pattern(String str) {
+    public static long[] pattern(String str) {
         boolean lastWasWhitespace;
         int strlen = str.length();
 

@@ -3,32 +3,18 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="icon.png" 
     >
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content" android:text="Message text to morse via flash"/>
     <EditText
-        android:id="@+id/countFrom"
+        android:id="@+id/message"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content" android:minEms="5"/>
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-
-    <CheckBox android:id="@+id/CheckBox01" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Continuously repeat"></CheckBox><Button
-        android:id="@+id/startCount"
+        android:layout_height="wrap_content"/>
+    <CheckBox android:id="@+id/repeat" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Continuously repeat"></CheckBox>
+    <Button
+        android:id="@+id/morse"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" android:text="Morse/Flash the message now!"/>
-
-
 </LinearLayout>
 

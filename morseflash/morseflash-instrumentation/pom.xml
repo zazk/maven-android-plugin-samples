@@ -11,5 +11,39 @@
   <groupId>com.simpligility.android.morse</groupId>
   <artifactId>instrumentation</artifactId>
   <packaging>apk</packaging>
+  <name>MorseFlashAppInstrumentation</name>
 
+  <dependencies>
+    <dependency>
+      <groupId>com.simpligility.android.morse</groupId>
+      <artifactId>morseflash</artifactId>
+      <version>${project.version}</version>
+      <type>apk</type>
+    </dependency>
+  </dependencies>
+
+   <build>
+    <sourceDirectory>src</sourceDirectory>
+    <plugins>
+      <plugin>
+        <groupId>com.jayway.maven.plugins.android.generation2</groupId>
+        <artifactId>maven-android-plugin</artifactId>
+        <configuration>
+          <sdk>
+            <platform>1.6</platform>
+          </sdk>
+          <deleteConflictingFiles>true</deleteConflictingFiles>
+          <enableIntegrationTest>true</enableIntegrationTest>
+        </configuration>
+        <extensions>true</extensions>
+      </plugin>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <source>1.5</source>
+          <target>1.5</target>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
 </project>

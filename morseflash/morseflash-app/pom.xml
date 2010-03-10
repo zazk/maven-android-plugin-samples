@@ -39,7 +39,7 @@
           </sdk>
           <emulator>
             <avd>16</avd>
-            <options>-no-skin</options>
+            <!--<options>-no-skin</options>-->
           </emulator>
           <deleteConflictingFiles>true</deleteConflictingFiles>
         </configuration>

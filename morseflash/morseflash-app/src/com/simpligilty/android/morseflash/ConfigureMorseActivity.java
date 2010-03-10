@@ -3,7 +3,7 @@ package com.simpligilty.android.morseflash;
 import android.app.Activity;
 import android.os.Bundle;
 
-public class ConfigureMorse extends Activity {
+public class ConfigureMorseActivity extends Activity {
     /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState) {
