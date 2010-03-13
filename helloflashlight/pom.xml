@@ -32,7 +32,7 @@
             <plugin>
                 <groupId>com.jayway.maven.plugins.android.generation2</groupId>
                 <artifactId>maven-android-plugin</artifactId>
-                <version>2.3.1-SNAPSHOT</version>
+                <version>2.3.2</version>
                 <configuration>
                     <sdk>
                         <platform>2.1</platform>
