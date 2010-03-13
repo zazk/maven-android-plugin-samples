@@ -15,7 +15,7 @@ http://code.google.com/p/maven-android-plugin/wiki/Samples
 NOTE:
         If you see the word SNAPSHOT anywhere in the samples pom.xml files,
         you have the wrong version of the samples.
-        
+
         Then you MUST go to
         http://code.google.com/p/maven-android-plugin/wiki/Samples
         and find the correct Samples link from there.
