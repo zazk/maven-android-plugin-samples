@@ -35,7 +35,7 @@
                 <version>2.3.3-SNAPSHOT</version>
                 <configuration>
                     <sdk>
-                        <platform>2.1</platform>
+                        <platform>7</platform>
                     </sdk>
                     <deleteConflictingFiles>true</deleteConflictingFiles>
                 </configuration>
