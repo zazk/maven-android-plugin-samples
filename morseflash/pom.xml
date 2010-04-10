@@ -4,10 +4,10 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.simpligility.android.morse</groupId>
-  <artifactId>parent</artifactId>
+  <artifactId>morseflash-parent</artifactId>
   <version>0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
-  <name>MorseFlash</name>
+  <name>MorseFlash Parent</name>
 
   <dependencyManagement>
     <dependencies>
@@ -30,7 +30,7 @@
         <plugin>
           <groupId>com.jayway.maven.plugins.android.generation2</groupId>
           <artifactId>maven-android-plugin</artifactId>
-          <version>2.3.1-SNAPSHOT</version>
+          <version>2.3.3</version>
         </plugin>
       </plugins>
     </pluginManagement>

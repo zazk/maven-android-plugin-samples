@@ -21,6 +21,11 @@
       <version>${project.version}</version>
     </dependency>
     <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
       <groupId>android</groupId>
       <artifactId>android</artifactId>
       <scope>provided</scope>
@@ -29,13 +34,14 @@
 
   <build>
     <sourceDirectory>src</sourceDirectory>
+    <testSourceDirectory>test</testSourceDirectory>
     <plugins>
       <plugin>
         <groupId>com.jayway.maven.plugins.android.generation2</groupId>
         <artifactId>maven-android-plugin</artifactId>
         <configuration>
           <sdk>
-            <platform>1.6</platform>
+            <platform>4</platform>
           </sdk>
           <emulator>
             <avd>16</avd>

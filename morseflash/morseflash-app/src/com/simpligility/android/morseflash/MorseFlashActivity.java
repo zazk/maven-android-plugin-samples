@@ -22,8 +22,8 @@ public class MorseFlashActivity extends Activity
         table.setBackgroundColor(Color.WHITE);
 
         application = (MorseFlashApplication) getApplication();
-        message = application.getMessage();
-        repeat = application.getRepeat();
+        message = application.message;
+        repeat = application.repeat;
 
         long[] morseCode = MorseCodeConverter.pattern(message);
 

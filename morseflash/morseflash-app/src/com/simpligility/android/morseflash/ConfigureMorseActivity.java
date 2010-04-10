@@ -30,8 +30,8 @@ public class ConfigureMorseActivity extends Activity {
                     public void onClick(View view) {
 
                         application = (MorseFlashApplication) getApplication();
-                        application.setMessage(message.getText().toString());
-                        application.setRepeat(repeat.isChecked());
+                        application.message = message.getText().toString();
+                        application.repeat = repeat.isChecked();
 
                         intent = new Intent("com.simpligility.android.morseflash.SHOW_MORSEFLASH");
                         startActivity(intent);
