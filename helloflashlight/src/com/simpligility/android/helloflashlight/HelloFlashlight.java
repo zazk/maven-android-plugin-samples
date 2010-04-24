@@ -33,59 +33,19 @@ import android.widget.TableLayout;
         blackButton = (Button) findViewById(R.id.ButtonBlack);
         whiteButton = (Button) findViewById(R.id.ButtonWhite);
         
-        redButton.setOnClickListener(
-        		new Button.OnClickListener()
-        		{
-        	        public void onClick(View v)
-        	        {
-        	        	table.setBackgroundColor(Color.RED);
-        	        }
-        			
-        		}
-    	);
+        redButton.setOnClickListener(OnClickChangeColor(Color.RED));
+        greenButton.setOnClickListener(OnClickChangeColor(Color.GREEN));
+        blueButton.setOnClickListener(OnClickChangeColor(Color.BLUE));
+        blackButton.setOnClickListener(OnClickChangeColor(Color.BLACK));
+        whiteButton.setOnClickListener(OnClickChangeColor(Color.WHITE));
+    }
 
-        greenButton.setOnClickListener(
-        		new Button.OnClickListener()
-        		{
-        	        public void onClick(View v)
-        	        {
-        	        	table.setBackgroundColor(Color.GREEN);
-        	        }
-        			
-        		}
-    	);
-        
-        blueButton.setOnClickListener(
-        		new Button.OnClickListener()
-        		{
-        	        public void onClick(View v)
-        	        {
-        	        	table.setBackgroundColor(Color.BLUE);
-        	        }
-        			
-        		}
-    	);
-
-        blackButton.setOnClickListener(
-        		new Button.OnClickListener()
-        		{
-        	        public void onClick(View v)
-        	        {
-        	        	table.setBackgroundColor(Color.BLACK);
-        	        }
-        			
-        		}
-    	);
-
-        whiteButton.setOnClickListener(
-        		new Button.OnClickListener()
-        		{
-        	        public void onClick(View v)
-        	        {
-        	        	table.setBackgroundColor(Color.WHITE);
-        	        }
-        			
-        		}
-    	);
+    View.OnClickListener OnClickChangeColor(final int color)
+    {
+        return new View.OnClickListener() {
+            public void onClick(View view) {
+                table.setBackgroundColor(color);
+            }
+        };
     }
 }

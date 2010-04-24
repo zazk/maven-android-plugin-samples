@@ -15,5 +15,9 @@ The following steps were done for the project creation.
 
 mvn clean install android:deploy
 
+- if an avd with the name 16 with platform 1.6 or higher exists the emulator can be started with
+
+mvn android:emulator-start
+
 
  
