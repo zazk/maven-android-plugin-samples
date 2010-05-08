@@ -16,7 +16,10 @@
 
 package com.simpligility.android.morse;
 
-/** Class that implements the text to morse code coversion */
+/**
+ * Class that implements the text to morse code conversion. This class was taken from the Android SDK demo code
+ * and merely moved to a different package.
+ */
 public class MorseCodeConverter {
     private static final long SPEED_BASE = 100;
     static final long DOT = SPEED_BASE;

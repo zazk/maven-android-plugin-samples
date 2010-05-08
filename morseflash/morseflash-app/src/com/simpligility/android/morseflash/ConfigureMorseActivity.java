@@ -8,11 +8,15 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 
+/**
+ *
+ *
+ * @author Manfred Moser <manfred@simpligility.com>
+ */
 public class ConfigureMorseActivity extends Activity {
 
     private Button morse;
     private EditText message;
-    private CheckBox repeat;
     private MorseFlashApplication application;
     Intent intent = null;
 
@@ -22,18 +26,16 @@ public class ConfigureMorseActivity extends Activity {
         setContentView(R.layout.main);
 
         message = (EditText) findViewById(R.id.message);
-        repeat = (CheckBox) findViewById(R.id.repeat);
         morse = (Button) findViewById(R.id.morse);
 
         morse.setOnClickListener(
-                new Button.OnClickListener(){
+                new Button.OnClickListener() {
                     public void onClick(View view) {
 
                         application = (MorseFlashApplication) getApplication();
                         application.message = message.getText().toString();
-                        application.repeat = repeat.isChecked();
 
-                        intent = new Intent("com.simpligility.android.morseflash.SHOW_MORSEFLASH");
+                        intent = new Intent(ConfigureMorseActivity.this, MorseFlashActivity.class);
                         startActivity(intent);
                     }
                 }

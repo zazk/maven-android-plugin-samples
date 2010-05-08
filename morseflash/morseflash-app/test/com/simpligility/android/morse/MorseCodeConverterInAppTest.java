@@ -4,11 +4,13 @@ import junit.framework.TestCase;
 import org.junit.Assert;
 
 /**
- * MorseCodeConverterTest is the unit test suite for {@link com.simpligility.android.morse.MorseCodeConverter}.
+ * MorseCodeConverterInAppTest is the unit test suite for {@link com.simpligility.android.morse.MorseCodeConverter}.
+ * This class is a duplicate of MorseCodeConverterInAppTest showing how a pure unit test can run within the same project
+ * as the Android application.
  *
-* @author Manfred Moser <manfred@simpligility.com>
+ * @author Manfred Moser <manfred@simpligility.com>
  */
-public class MorseCodeConverterTest extends TestCase {
+public class MorseCodeConverterInAppTest extends TestCase {
 
     /**
      * Test the timing parameters for signals.

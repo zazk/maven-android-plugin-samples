@@ -30,19 +30,12 @@
         <artifactId>maven-android-plugin</artifactId>
         <configuration>
           <sdk>
-            <platform>1.6</platform>
+            <platform>4</platform>
           </sdk>
           <deleteConflictingFiles>true</deleteConflictingFiles>
           <enableIntegrationTest>true</enableIntegrationTest>
         </configuration>
         <extensions>true</extensions>
-      </plugin>
-      <plugin>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <configuration>
-          <source>1.5</source>
-          <target>1.5</target>
-        </configuration>
       </plugin>
     </plugins>
   </build>
