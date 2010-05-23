@@ -1,27 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.simpligility.android</groupId>
-    <artifactId>helloflashlight</artifactId>
-    <version>2.4.1-SNAPSHOT</version>
-    <packaging>apk</packaging>
-    <name>HelloFlashlight</name>
-
     <parent>
-        <!--
-            This parent tag is only relevant for releasing maven-android-plugin-samples.
-            You can safely remove it from your own project.
-        -->
-        <groupId>com.jayway.maven.plugins.android.generation2.samples</groupId>
-        <artifactId>samples</artifactId>
-        <version>2.4.1-SNAPSHOT</version>
+        <groupId>com.simpligility.android.morse</groupId>
+        <artifactId>parent</artifactId>
+        <version>0.1-SNAPSHOT</version>
     </parent>
+
+    <groupId>com.simpligility.android.morse</groupId>
+    <artifactId>morseflash-app</artifactId>
+    <packaging>apk</packaging>
+    <name>MorseFlash</name>
 
     <dependencies>
         <dependency>
+            <groupId>com.simpligility.android.morse</groupId>
+            <artifactId>morse-library</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
             <groupId>android</groupId>
             <artifactId>android</artifactId>
-            <version>1.6_r2</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
@@ -29,28 +35,25 @@
     <build>
         <finalName>${project.artifactId}</finalName>
         <sourceDirectory>src</sourceDirectory>
+        <testSourceDirectory>test</testSourceDirectory>
         <plugins>
             <plugin>
                 <groupId>com.jayway.maven.plugins.android.generation2</groupId>
                 <artifactId>maven-android-plugin</artifactId>
-                <version>2.4.1-SNAPSHOT</version>
                 <configuration>
                     <sdk>
-                        <!-- platform or api level (api level 4 = platform 1.6)-->
                         <platform>4</platform>
                     </sdk>
                     <emulator>
-                        <!-- the name of the avd device to use for starting the emulator -->
                         <avd>16</avd>
+                        <!--<options>-no-skin</options>-->
                     </emulator>
                     <deleteConflictingFiles>true</deleteConflictingFiles>
-                    <undeployBeforeDeploy>true</undeployBeforeDeploy>
                 </configuration>
                 <extensions>true</extensions>
             </plugin>
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <!-- version 2.3 defaults to java 1.5, so no further configuration needed-->
                 <version>2.3</version>
             </plugin>
         </plugins>

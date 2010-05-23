@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.simpligility.android.morse</groupId>
+    <artifactId>parent</artifactId>
+    <version>0.1-SNAPSHOT</version>
+  </parent>
+  <groupId>com.simpligility.android.morse</groupId>
+  <artifactId>instrumentation</artifactId>
+  <packaging>apk</packaging>
+  <name>MorseFlashAppInstrumentation</name>
+
+  <dependencies>
+    <dependency>
+      <groupId>com.simpligility.android.morse</groupId>
+      <artifactId>morseflash</artifactId>
+      <version>${project.version}</version>
+      <type>apk</type>
+    </dependency>
+  </dependencies>
+
+   <build>
+    <sourceDirectory>src</sourceDirectory>
+    <plugins>
+      <plugin>
+        <groupId>com.jayway.maven.plugins.android.generation2</groupId>
+        <artifactId>maven-android-plugin</artifactId>
+        <configuration>
+          <sdk>
+            <platform>4</platform>
+          </sdk>
+          <deleteConflictingFiles>true</deleteConflictingFiles>
+          <enableIntegrationTest>true</enableIntegrationTest>
+        </configuration>
+        <extensions>true</extensions>
+      </plugin>
+    </plugins>
+  </build>
+</project>
