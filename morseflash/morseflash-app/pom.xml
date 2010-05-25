@@ -38,6 +38,10 @@
         <testSourceDirectory>test</testSourceDirectory>
         <plugins>
             <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>2.3</version>
+            </plugin>
+            <plugin>
                 <groupId>com.jayway.maven.plugins.android.generation2</groupId>
                 <artifactId>maven-android-plugin</artifactId>
                 <configuration>
@@ -51,11 +55,16 @@
                     <deleteConflictingFiles>true</deleteConflictingFiles>
                 </configuration>
                 <extensions>true</extensions>
+                <executions>
+                    <execution>
+                        <phase>initialize</phase>
+                        <goals>
+                            <goal>emulator-start</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
-            <plugin>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>2.3</version>
-            </plugin>
+
         </plugins>
     </build>
 </project>
