@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.simpligility.android.morse</groupId>
-        <artifactId>parent</artifactId>
+        <artifactId>morseflash-parent</artifactId>
         <version>0.1-SNAPSHOT</version>
     </parent>
 
@@ -52,19 +52,29 @@
                         <avd>16</avd>
                         <!--<options>-no-skin</options>-->
                     </emulator>
+                    <zipalign>
+                        <verbose>true</verbose>
+                    </zipalign>
                     <deleteConflictingFiles>true</deleteConflictingFiles>
                 </configuration>
                 <extensions>true</extensions>
                 <executions>
                     <execution>
+                        <id>startEmulator</id>
                         <phase>initialize</phase>
                         <goals>
                             <goal>emulator-start</goal>
                         </goals>
                     </execution>
+                    <execution>
+                        <id>alignApk</id>
+                        <phase>install</phase>
+                        <goals>
+                            <goal>zipalign</goal>
+                        </goals>
+                    </execution>
                 </executions>
             </plugin>
-
         </plugins>
     </build>
 </project>
