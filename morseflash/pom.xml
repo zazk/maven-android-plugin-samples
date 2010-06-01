@@ -9,7 +9,6 @@
     <packaging>pom</packaging>
     <name>MorseFlash Parent</name>
 
-
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -20,23 +19,23 @@
             <dependency>
                 <groupId>android</groupId>
                 <artifactId>android</artifactId>
-                <version>1.6_r2</version>
+                <version>1.6_r3</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
-
+   
     <build>
         <pluginManagement>
             <plugins>
                 <plugin>
-                    <groupId>com.jayway.maven.plugins.android.generation2</groupId>
-                    <artifactId>maven-android-plugin</artifactId>
-                    <version>2.3.3</version>
-                </plugin>
-                <plugin>
                     <artifactId>maven-compiler-plugin</artifactId>
                     <!-- version 2.3 defaults to java 1.5, so no further configuration needed-->
                     <version>2.3</version>
+                </plugin>
+                <plugin>
+                    <groupId>com.jayway.maven.plugins.android.generation2</groupId>
+                    <artifactId>maven-android-plugin</artifactId>
+                    <version>2.4.1-SNAPSHOT</version>
                 </plugin>
             </plugins>
         </pluginManagement>
@@ -45,6 +44,6 @@
     <modules>
         <module>morse-lib</module>
         <module>morseflash-app</module>
-        <!--<module>morseflash-instrumentation</module>-->
+        <module>morseflash-instrumentation</module>
     </modules>
 </project>
