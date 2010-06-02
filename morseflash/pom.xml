@@ -9,6 +9,16 @@
     <packaging>pom</packaging>
     <name>MorseFlash Parent</name>
 
+    <parent>
+        <!--
+            This parent tag is only relevant for releasing maven-android-plugin-samples.
+            You can safely remove it from your own project.
+        -->
+        <groupId>com.jayway.maven.plugins.android.generation2.samples</groupId>
+        <artifactId>samples</artifactId>
+        <version>2.4.1-SNAPSHOT</version>
+    </parent>
+
     <dependencyManagement>
         <dependencies>
             <dependency>
