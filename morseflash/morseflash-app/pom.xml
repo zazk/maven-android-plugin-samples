@@ -26,8 +26,13 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>android</groupId>
+            <groupId>com.google.android</groupId>
             <artifactId>android</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.google.android</groupId>
+            <artifactId>android-test</artifactId>
             <scope>provided</scope>
         </dependency>
     </dependencies>
@@ -50,6 +55,7 @@
                     </sdk>
                     <emulator>
                         <avd>16</avd>
+                        <wait>10000</wait>
                         <!--<options>-no-skin</options>-->
                     </emulator>
                     <zipalign>
@@ -78,3 +84,4 @@
         </plugins>
     </build>
 </project>
+
