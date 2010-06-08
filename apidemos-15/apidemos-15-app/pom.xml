@@ -53,7 +53,7 @@
                         <platform>3</platform>
                     </sdk>
                     <emulator>
-                        <avd>15</avd>
+                        <avd>22</avd>
                     </emulator>
                     <deleteConflictingFiles>true</deleteConflictingFiles>
                 </configuration>

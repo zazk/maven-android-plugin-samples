@@ -24,6 +24,8 @@
 
     <modules>
 		<module>apidemos-15</module>
+        <module>helloflashlight</module>
+        <module>morseflash</module>
 	</modules>
 
     <url>http://code.google.com/p/maven-android-plugin</url>
@@ -64,15 +66,6 @@
             <archive>http://groups.google.com/group/maven-android-developers/topics</archive>
         </mailingList>
     </mailingLists>
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>junit</groupId>
-                <artifactId>junit</artifactId>
-                <version>4.4</version>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
     <build>
         <pluginManagement>
             <plugins>
