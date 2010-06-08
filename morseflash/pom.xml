@@ -3,9 +3,14 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.jayway.maven.plugins.android.generation2.samples</groupId>
+        <artifactId>samples</artifactId>
+        <version>2.4.1-SNAPSHOT</version>
+    </parent>
+
     <groupId>com.simpligility.android.morse</groupId>
     <artifactId>morseflash-parent</artifactId>
-    <version>0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>MorseFlash Parent</name>
 
@@ -40,7 +45,8 @@
                 <plugin>
                     <groupId>com.jayway.maven.plugins.android.generation2</groupId>
                     <artifactId>maven-android-plugin</artifactId>
-                    <version>2.4.1-SNAPSHOT</version>
+                    <version>${project.version}</version>
+                    <!--<version>2.4.1-SNAPSHOT</version>-->
                 </plugin>
             </plugins>
         </pluginManagement>

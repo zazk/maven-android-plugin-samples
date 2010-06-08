@@ -48,15 +48,6 @@
                 <groupId>com.jayway.maven.plugins.android.generation2</groupId>
                 <artifactId>maven-android-plugin</artifactId>
                 <version>2.3.3</version>
-                <configuration>
-                    <sdk>
-                        <platform>3</platform>
-                    </sdk>
-                    <emulator>
-                        <avd>22</avd>
-                    </emulator>
-                    <deleteConflictingFiles>true</deleteConflictingFiles>
-                </configuration>
                 <extensions>true</extensions>
                 <executions>
                     <execution>
@@ -68,15 +59,6 @@
                     </execution>
                 </executions>
             </plugin>
-
-            <plugin>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <source>1.5</source>
-                    <target>1.5</target>
-                </configuration>
-            </plugin>
-
         </plugins>
     </build>
 

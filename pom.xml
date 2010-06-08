@@ -59,6 +59,14 @@
                 <role>Developer</role>
             </roles>
         </developer>
+        <developer>
+            <name>Manfred Moser</name>
+            <email>manfred@simpligility.com</email>
+            <url>http://www.simpligility.com/</url>
+            <roles>
+                <role>Developer</role>
+            </roles>
+        </developer>
     </developers>
     <mailingLists>
         <mailingList>
@@ -77,10 +85,6 @@
                 <plugin>
                     <artifactId>maven-clean-plugin</artifactId>
                     <version>2.3</version>
-                </plugin>
-                <plugin>
-                    <artifactId>maven-compiler-plugin</artifactId>
-                    <version>2.0.2</version>
                 </plugin>
                 <plugin>
                     <artifactId>maven-enforcer-plugin</artifactId>
@@ -106,11 +110,6 @@
                     <artifactId>maven-site-plugin</artifactId>
                     <version>2.0</version>
                 </plugin>
-                <plugin>
-                    <groupId>org.codehaus.mojo</groupId>
-                    <artifactId>versions-maven-plugin</artifactId>
-                    <version>1.0</version>
-                </plugin>
             </plugins>
         </pluginManagement>
         <plugins>
@@ -127,14 +126,10 @@
                     <autoVersionSubmodules>true</autoVersionSubmodules>
                 </configuration>
             </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <source>1.5</source>
-                    <target>1.5</target>
-                </configuration>
-            </plugin>
+            <!--<plugin>-->
+                <!--<groupId>org.apache.maven.plugins</groupId>-->
+                <!--<artifactId>maven-compiler-plugin</artifactId>-->
+            <!--</plugin>-->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
@@ -165,14 +160,6 @@
                         </configuration>
                     </execution>
                 </executions>
-            </plugin>
-            <!--
-                the versions plugin can be used to check for new plugin versions like this:
-                mvn versions:display-plugin-updates
-             -->
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>versions-maven-plugin</artifactId>
             </plugin>
         </plugins>
     </build>
