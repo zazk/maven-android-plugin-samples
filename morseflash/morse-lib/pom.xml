@@ -6,8 +6,8 @@
 
   <parent>
     <groupId>com.simpligility.android.morse</groupId>
-    <artifactId>parent</artifactId>
-    <version>0.1-SNAPSHOT</version>
+    <artifactId>morseflash-parent</artifactId>
+    <version>2.4.1-SNAPSHOT</version>
   </parent>
   <groupId>com.simpligility.android.morse</groupId>
   <artifactId>morse-library</artifactId>
@@ -22,7 +22,4 @@
           <scope>test</scope>
       </dependency>
   </dependencies>
-
-  <build>
-  </build>
 </project>

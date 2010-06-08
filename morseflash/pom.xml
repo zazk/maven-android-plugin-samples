@@ -3,6 +3,7 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
+    <!-- remove parent section for standalone project or change to company super pom-->
     <parent>
         <groupId>com.jayway.maven.plugins.android.generation2.samples</groupId>
         <artifactId>samples</artifactId>
@@ -46,7 +47,22 @@
                     <groupId>com.jayway.maven.plugins.android.generation2</groupId>
                     <artifactId>maven-android-plugin</artifactId>
                     <version>${project.version}</version>
+                    <!-- change to explicit version for standalone project or remove if version inherited from company pom -->
                     <!--<version>2.4.1-SNAPSHOT</version>-->
+                    <configuration>
+                        <sdk>
+                            <platform>4</platform>
+                        </sdk>
+                        <emulator>
+                            <avd>16</avd>
+                            <wait>10000</wait>
+                            <!--<options>-no-skin</options>-->
+                        </emulator>
+                        <zipalign>
+                            <verbose>true</verbose>
+                        </zipalign>
+                        <deleteConflictingFiles>true</deleteConflictingFiles>
+                    </configuration>
                 </plugin>
             </plugins>
         </pluginManagement>
