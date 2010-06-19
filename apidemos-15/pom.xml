@@ -31,12 +31,12 @@
             <dependency>
                 <groupId>com.google.android</groupId>
                 <artifactId>android</artifactId>
-                <version>1.5r3</version>
+                <version>1.5_r4</version>
             </dependency>
             <dependency>
                 <groupId>com.google.android</groupId>
                 <artifactId>android-test</artifactId>
-                <version>1.5r3</version>
+                <version>1.5_r4</version>
             </dependency>
             <dependency>
                 <groupId>junit</groupId>
