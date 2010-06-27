@@ -12,7 +12,7 @@
   <groupId>com.simpligility.android.morse</groupId>
   <artifactId>morse-library</artifactId>
   <name>MorseLibrary</name>
-  <url>http://www.simplgility.com/morseflash</url>
+  <url>http://www.simpligility.com/morseflash</url>
   <description>A tiny library for morse based messaging.</description>
 
   <dependencies>
