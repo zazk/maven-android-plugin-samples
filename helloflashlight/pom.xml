@@ -1,27 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.simpligility.android</groupId>
-    <artifactId>helloflashlight</artifactId>
-    <version>2.4.1-SNAPSHOT</version>
-    <packaging>apk</packaging>
-    <name>HelloFlashlight</name>
-
     <parent>
         <!--
             This parent tag is only relevant for releasing maven-android-plugin-samples.
-            You can safely remove it from your own project.
+            You can safely remove it from your own project, or change to your company's super pom.
         -->
         <groupId>com.jayway.maven.plugins.android.generation2.samples</groupId>
         <artifactId>samples</artifactId>
         <version>2.4.1-SNAPSHOT</version>
     </parent>
 
+    <groupId>com.simpligility.android</groupId>
+    <artifactId>helloflashlight</artifactId>
+    <!-- for a standalone project without parent you need to have a version... -->
+    <!--<version>0.1.0-SNAPSHOT</version>-->
+    <packaging>apk</packaging>
+    <name>HelloFlashlight</name>
+
     <dependencies>
         <dependency>
-            <groupId>android</groupId>
+            <groupId>com.google.android</groupId>
             <artifactId>android</artifactId>
-            <version>1.6_r3</version>
+            <version>1.6_r2</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
@@ -33,7 +34,8 @@
             <plugin>
                 <groupId>com.jayway.maven.plugins.android.generation2</groupId>
                 <artifactId>maven-android-plugin</artifactId>
-                <version>2.4.1-SNAPSHOT</version>
+                <!-- change to explicit version for standalone project or remove if version inherited from company pom -->
+                <!--<version>2.4.1</version>-->
                 <configuration>
                     <sdk>
                         <!-- platform or api level (api level 4 = platform 1.6)-->
@@ -41,7 +43,7 @@
                     </sdk>
                     <emulator>
                         <!-- the name of the avd device to use for starting the emulator -->
-                        <avd>16</avd>
+                        <avd>22</avd>
                     </emulator>
                     <deleteConflictingFiles>true</deleteConflictingFiles>
                     <undeployBeforeDeploy>true</undeployBeforeDeploy>

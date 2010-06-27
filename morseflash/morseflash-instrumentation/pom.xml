@@ -15,8 +15,13 @@
 
     <dependencies>
         <dependency>
-            <groupId>android</groupId>
+            <groupId>com.google.android</groupId>
             <artifactId>android</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.google.android</groupId>
+            <artifactId>android-test</artifactId>
             <scope>provided</scope>
         </dependency>
         <dependency>
@@ -38,18 +43,9 @@
         <sourceDirectory>src</sourceDirectory>
         <plugins>
             <plugin>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>2.3</version>
-            </plugin>
-            <plugin>
                 <groupId>com.jayway.maven.plugins.android.generation2</groupId>
                 <artifactId>maven-android-plugin</artifactId>
-                <version>2.4.1-SNAPSHOT</version>
                 <configuration>
-                    <sdk>
-                        <platform>4</platform>
-                    </sdk>
-                    <deleteConflictingFiles>true</deleteConflictingFiles>
                     <enableIntegrationTest>true</enableIntegrationTest>
                 </configuration>
                 <extensions>true</extensions>

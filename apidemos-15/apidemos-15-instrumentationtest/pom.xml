@@ -28,8 +28,13 @@
 
     <dependencies>
         <dependency>
-            <groupId>android</groupId>
+            <groupId>com.google.android</groupId>
             <artifactId>android</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.google.android</groupId>
+            <artifactId>android-test</artifactId>
             <scope>provided</scope>
         </dependency>
 
@@ -53,30 +58,12 @@
     </dependencies>
     
     <build>
-        <!--<finalName>${artifactId}</finalName>-->
+        <!--<finalName>${project.artifactId}</finalName>-->
         <plugins>
             <plugin>
                 <groupId>com.jayway.maven.plugins.android.generation2</groupId>
                 <artifactId>maven-android-plugin</artifactId>
-                <configuration>
-                    <sdk>
-                        <path>${env.ANDROID_HOME}</path>
-                        <platform>3</platform>
-                    </sdk>
-                    <deleteConflictingFiles>true</deleteConflictingFiles>
-                    <undeployBeforeDeploy>true</undeployBeforeDeploy>
-                </configuration>
-                <extensions>true</extensions>
             </plugin>
-
-            <plugin>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <source>1.5</source>
-                    <target>1.5</target>
-                </configuration>
-            </plugin>
-
         </plugins>
     </build>
 

@@ -4,27 +4,23 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-  <parent>
+    <parent>
+        <groupId>com.simpligility.android.morse</groupId>
+        <artifactId>morseflash-parent</artifactId>
+        <version>2.4.1-SNAPSHOT</version>
+    </parent>
     <groupId>com.simpligility.android.morse</groupId>
-    <artifactId>morseflash-parent</artifactId>
-    <version>2.4.1-SNAPSHOT</version>
-  </parent>
-  <groupId>com.simpligility.android.morse</groupId>
-  <artifactId>morse-library</artifactId>
-  <name>MorseLibrary</name>
-  <url>http://www.simplgility.com/morseflash</url>
-  <description>A tiny library for morse based messaging.</description>
+    <artifactId>morse-library</artifactId>
+    <name>MorseLibrary</name>
+    <url>http://www.simpligility.com/morseflash</url>
+    <description>A tiny library for morse based messaging.</description>
 
-  <dependencies>
-      <dependency>
-          <groupId>junit</groupId>
-          <artifactId>junit</artifactId>
-          <scope>test</scope>
-      </dependency>
-  </dependencies>
-
-  <build>
-  </build>
-
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+  
 </project>
-
