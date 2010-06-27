@@ -11,7 +11,7 @@
     </parent>
     <groupId>com.simpligility.android.morse</groupId>
     <artifactId>morse-library</artifactId>
-    <name>MorseLibrary</name>
+    <name>Maven Android Plugin - samples - MorseFlash - Library</name>
     <url>http://www.simpligility.com/morseflash</url>
     <description>A tiny library for morse based messaging.</description>
 

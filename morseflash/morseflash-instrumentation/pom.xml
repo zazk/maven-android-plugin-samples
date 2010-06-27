@@ -11,7 +11,7 @@
     <groupId>com.simpligility.android.morse</groupId>
     <artifactId>morseflash-instrumentation</artifactId>
     <packaging>apk</packaging>
-    <name>MorseFlashAppInstrumentation</name>
+    <name>Maven Android Plugin - samples - MorseFlash - Instrumentation Test</name>
 
     <dependencies>
         <dependency>

@@ -18,7 +18,7 @@
     <!-- for a standalone project without parent you need to have a version... -->
     <!--<version>0.1.0-SNAPSHOT</version>-->
     <packaging>pom</packaging>
-    <name>MorseFlash Parent</name>
+    <name>Maven Android Plugin - samples - MorseFlash</name>
 
     <dependencyManagement>
         <dependencies>

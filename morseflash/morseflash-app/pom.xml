@@ -12,7 +12,7 @@
     <groupId>com.simpligility.android.morse</groupId>
     <artifactId>morseflash-app</artifactId>
     <packaging>apk</packaging>
-    <name>MorseFlash</name>
+    <name>Maven Android Plugin - samples - MorseFlash - App</name>
 
     <dependencies>
         <dependency>
